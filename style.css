@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif; /* added fallback */
+  background: linear-gradient(to right, purple, blue);
+  color: white;
+  padding: 50px;
+  margin: 0; /* prevents default browser margin */
+}
+
+#weather-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
