@@ -1,15 +1,78 @@
 body {
-  text-align: center;
-  font-family: Arial, sans-serif; /* added fallback */
-  background: linear-gradient(to right, purple, blue);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   color: white;
-  padding: 50px;
-  margin: 0; /* prevents default browser margin */
 }
 
-#weather-container {
+.container {
+  text-align: center;
+}
+
+.weather-card {
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;
   border-radius: 10px;
-  display: inline-block;
+  margin-top: 20px;
+  min-width: 300px;
+}
+
+/* Search Section */
+.search-section {
+  margin-bottom: 20px;
+}
+
+#cityInput {
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+#cityInput:focus {
+  box-shadow: 0 0 5px white;
+}
+
+#searchBtn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+#searchBtn:hover {
+  background-color: #ddd;
+}
+
+#searchBtn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error {
+  color: #ffdddd;
+  font-weight: bold;
+}
+
+/* Spinner */
+.spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
