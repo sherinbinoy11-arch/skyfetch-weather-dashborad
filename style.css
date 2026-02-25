@@ -5,74 +5,51 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
 }
 
 .container {
   text-align: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
 .weather-card {
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-top: 20px;
-  min-width: 300px;
 }
 
-/* Search Section */
-.search-section {
-  margin-bottom: 20px;
-}
-
-#cityInput {
-  padding: 10px;
-  width: 200px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-}
-
-#cityInput:focus {
-  box-shadow: 0 0 5px white;
-}
-
-#searchBtn {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  background-color: white;
-  cursor: pointer;
-}
-
-#searchBtn:hover {
-  background-color: #ddd;
-}
-
-#searchBtn:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
-}
-
-/* Error Message */
-.error {
-  color: #ffdddd;
+.temp {
+  font-size: 24px;
   font-weight: bold;
 }
 
-/* Spinner */
-.spinner {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid white;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-  margin: 20px auto;
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.forecast-card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 10px;
 }
