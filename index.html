@@ -1,22 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SkyFetch Weather App</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>SkyFetch Weather Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <input type="text" id="search-input" placeholder="Enter city name">
-    <button id="search-btn">Search</button>
+    <div class="container">
+        <h1>🌤 SkyFetch Weather Dashboard</h1>
 
-    <div id="loading" style="display:none;">Loading...</div>
-    <p id="error" style="color:red;"></p>
+        <!-- Search Section -->
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Enter city name..."
+            >
+            <button id="searchBtn">Search</button>
+        </div>
 
-    <div id="weather-container"></div>
-    <div id="forecast-container" class="forecast-grid"></div>
-  </div>
+        <!-- Loading Message -->
+        <p id="loading" class="loading hidden">Loading weather data...</p>
 
-  <script src="app.js"></script>
+        <!-- Error Message -->
+        <p id="error" class="error hidden"></p>
+
+        <!-- Current Weather Card -->
+        <div id="weatherCard" class="weather-card hidden">
+            <h2 id="cityName"></h2>
+            <img id="weatherIcon" alt="Weather Icon">
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
+            <p id="windSpeed"></p>
+        </div>
+
+        <!-- 5-Day Forecast Section -->
+        <div id="forecastSection" class="forecast-section hidden">
+            <h2>5-Day Forecast</h2>
+            <div id="forecastContainer" class="forecast-container"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+
 </body>
 </html>
